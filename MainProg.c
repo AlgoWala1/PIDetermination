@@ -3,7 +3,7 @@
 #include<conio.h>
 #define Precision 40
 #define Half 0.5
-// A program for the numeric calculation of the value of PI upto ten or so decimal places using Newton's Method
+// A program for the numeric calculation of the value of PI upto fifteen or so decimal places using Newton's Method
 //Take value of the power of 1/2 and return its integrated term's value
 double Integral(int power);
 double Integral(int power)
@@ -19,8 +19,8 @@ double fac(int num)
     return 1.0;
 }
 //Returns the sum of the Binomial series to void main
-double Summation();
-double Summation()
+long double Summation();
+long double Summation()
 {
     double sum=Half;//the zeroeth term in summation that is 1/2
     double prod;
@@ -40,10 +40,10 @@ double Summation()
     return sum;
 }
 
-void main()
+int main()
 {
-    double PI;
-    PI = 12 * (Summation() - sqrt(3)/8);
-    printf("The value of PI is %Lf",PI);
-    getche();
+    long double Pi;
+    Pi = 12 * (Summation() - sqrt(3)/8);
+    printf("The value of PI is %.15Lf",Pi);
+    getch();
 }
